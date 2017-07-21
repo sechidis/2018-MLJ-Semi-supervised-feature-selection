@@ -14,7 +14,7 @@ function [selectedFeatures] = semiMIM(X_data, Y_proxy, topK, prior_y)
 if nargin<3
     error('Not enough input arguments');
 else if nargin<4
-        prior_y = mean(Y_proxy==1);
+        prior_y = nanmean(Y_proxy==1);
     end
 end
 
