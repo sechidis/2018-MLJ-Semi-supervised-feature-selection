@@ -15,7 +15,7 @@ features=1:numf;
 
 finished = false;
 while ~finished
-    cmbVector = joint(X_data(:,cmb));
+    [~,~,cmbVector] = unique(X_data(:,cmb),'rows');
     association=[];dof=[];pvalue=[];
     for fIndex = 1:length(features)
         association(fIndex) = 2*N*cmi(X_data(:,features(fIndex)), Y_labels, cmbVector);
@@ -43,7 +43,7 @@ while ~finished && ~isempty(cmb)
     for n = 1:length(cmb)
         cmbwithoutn = cmb;
         cmbwithoutn(n)=[];
-        cmbwithoutnVector = joint(X_data(:,cmbwithoutn));
+        [~,~,cmbwithoutnVector] = unique(X_data(:,cmbwithoutn),'rows');
         association(n) = 2*N*cmi( X_data(:,cmb(n)), Y_labels, cmbwithoutnVector);
         dof(n)=   max(1,(length(unique(Y_labels))-1) *(length(unique(X_data(:,cmb(n))))-1) * max(1,length(unique(cmbwithoutnVector))));        
         Pvalue(n) = 1-chi2cdf(association(n),dof(n));

@@ -5,7 +5,7 @@ function CMI= cmi(  X, Y, Z)
 
 epsilon=10^(-50);
 
-if length(Z)==0
+if length(Z)==0 || length(unique(Z))==1
     CMI = mi(X,Y);
     return
 end
