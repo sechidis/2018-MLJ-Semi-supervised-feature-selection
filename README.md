@@ -1,4 +1,4 @@
-# MLJ 2017 - Simple Strategies for Semi-Supervised Feature Selection
+# MLJ 2018 - Simple Strategies for Semi-Supervised Feature Selection
 
 Matlab code for the methods presented in:
 
@@ -18,10 +18,11 @@ The tutorial 'Tutorial_SemiSupervised_FS.m' presents how our suggested methods c
 If you make use of the code found here, please cite the paper above.
 
 @article{sechidis2017semisupervised,<br />
-title = {Simple Strategies for Semi-Supervised Feature Selection},<br />
-journal = {Machine Learning},<br />
-volume = ,<br />
-pages = {},<br />
-year = 2017,<br />
+title = {Simple strategies for semi-supervised feature selection},<br />
 author = {Konstantinos Sechidis and Gavin Brown},<br />
+journal = {Machine Learning},<br />
+volume = {107},<br />
+number = {2},<br />
+pages = {357--395},<br />
+year = 2018<br />
 } 
